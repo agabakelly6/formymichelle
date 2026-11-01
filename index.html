@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#5a1226">
+  <title>To My Michelle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Soft paper grain + drifting details (purely decorative) -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="drift" aria-hidden="true">
+    <span style="--x:8%;  --y:12%; --d:0s;  --s:1.1rem">✦</span>
+    <span style="--x:86%; --y:9%;  --d:1.4s;--s:.9rem">♡</span>
+    <span style="--x:92%; --y:44%; --d:2.2s;--s:1rem">✦</span>
+    <span style="--x:5%;  --y:62%; --d:.8s; --s:1rem">♡</span>
+    <span style="--x:80%; --y:86%; --d:3s;  --s:1.2rem">✦</span>
+    <span style="--x:14%; --y:91%; --d:1.9s;--s:.9rem">♡</span>
+  </div>
+
+  <main>
+
+    <!-- ========== SCREEN 1: WELCOME ========== -->
+    <section id="welcome" class="screen is-active" aria-labelledby="title">
+      <div class="paper">
+        <span class="tape" aria-hidden="true"></span>
+
+        <p class="hand">A little something, made just for you...</p>
+        <h1 id="title">To My Michelle</h1>
+        <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+        <p class="message">
+          I made this with you in mind, one small piece at a time.
+          Take your time, open everything, and know that every bit of it is meant for you.
+        </p>
+
+        <!-- Countdown (filled in by script.js) -->
+        <div id="countdown-wrap">
+          <p class="hand small" id="countdown-label">Until your day, 11 November</p>
+          <div class="countdown" id="countdown" role="timer" aria-live="off">
+            <div class="unit"><span id="cd-days">--</span><small>days</small></div>
+            <div class="unit"><span id="cd-hours">--</span><small>hours</small></div>
+            <div class="unit"><span id="cd-minutes">--</span><small>minutes</small></div>
+            <div class="unit"><span id="cd-seconds">--</span><small>seconds</small></div>
+          </div>
+        </div>
+
+        <!-- Shown instead of the countdown once the birthday arrives -->
+        <div id="birthday-note" class="birthday-note" hidden>
+          <p class="hand">It's today, My Michelle.</p>
+          <p class="message">Happy Birthday. This whole day belongs to you.</p>
+        </div>
+
+        <button id="enter-btn" class="btn" type="button">Enter My Little World</button>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 2: ENVELOPE PLACEHOLDER ========== -->
+    <section id="envelope-screen" class="screen" aria-labelledby="env-text" aria-hidden="true" inert>
+      <div class="env-wrap">
+        <p class="hand" id="env-text">There's a little letter waiting for you...</p>
+
+        <div class="envelope" id="envelope">
+          <div class="env-back"></div>
+          <div class="env-card" aria-hidden="true"><span>For My Michelle</span></div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+          <div class="env-seal" aria-hidden="true">♡</div>
+        </div>
+
+        <button id="open-btn" class="btn" type="button">Open the Envelope</button>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 3: THE LETTER ========== -->
+    <section id="letter-screen" class="screen" aria-labelledby="letter-heading" aria-hidden="true" inert>
+      <article class="sheet letter">
+        <span class="corner tl" aria-hidden="true"></span>
+        <span class="corner br" aria-hidden="true"></span>
+
+        <p class="hand rv" style="--i:0">A Letter From Me to You</p>
+        <h2 id="letter-heading" class="rv" style="--i:1" tabindex="-1">To My Michelle ❤️</h2>
+        <p class="rule rv" style="--i:2" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+        <p class="salute rv" style="--i:3">My Michelle,</p>
+
+        <p class="rv" style="--i:4">If there’s one thing I hope you feel as you explore this little world I’ve made for you, it’s how much you mean to me.</p>
+        <p class="rv" style="--i:5">Today is special in more ways than one. Not only are we getting closer to your birthday, but we’re also celebrating ten months of us. Ten months of learning each other, making memories, laughing, loving, and figuring things out along the way. When I think about how far we’ve come, I can’t help but smile.</p>
+        <p class="rv" style="--i:6">You know, there’s something about being with you that makes even the simplest moments feel special. It doesn’t always have to be somewhere fancy or some big occasion. Sometimes, just being around you, talking to you, holding you close or simply looking at you is enough to make my day. You have this way of making ordinary moments mean so much more to me.</p>
+        <p class="rv" style="--i:7">And I know our journey hasn’t always been smooth. We’ve had our ups and downs, moments when we didn’t understand each other, moments when things got difficult, and times when loving each other required a little more patience. But through it all, here we are. Still choosing each other. Still growing. Still us.</p>
+        <p class="rv standalone" style="--i:8">I want you to know that I don’t take that for granted.</p>
+        <p class="rv" style="--i:9">I love you, Michelle. More than I probably manage to express sometimes. I love the person you are, the little things that make you you, and the happiness that comes with having you in my life.</p>
+        <p class="rv" style="--i:10">And when I say I want to go far with you, I mean it. Not only when everything is beautiful and easy, but also when life gets difficult. I’m willing to keep learning, growing, understanding and working towards the kind of love we both deserve. I don’t just want beautiful moments with you. I want a future with you.</p>
+        <p class="rv" style="--i:11">You’re the woman I see myself sharing this life with. The one I want beside me through the different seasons of life, the achievements, the challenges, the quiet days and all the adventures still waiting for us.</p>
+        <p class="rv" style="--i:12">So, my Michelle, as your special day gets closer, I hope you remember that you’re loved. Deeply, genuinely and intentionally.</p>
+        <p class="rv" style="--i:13">This little world is only a small expression of everything I wish I could put into words. Take your time exploring it. There’s a little piece of my heart waiting for you in every corner.</p>
+        <p class="rv" style="--i:14">Happy ten months to us, my love. And here’s to all the beautiful chapters we haven’t written yet.</p>
+
+        <p class="closing rv" style="--i:15"><strong>I love you, My Michelle. Always yours. ❤️</strong></p>
+
+        <button id="continue-btn" class="btn" type="button">Continue, My Love</button>
+      </article>
+    </section>
+
+    <!-- ========== SCREEN 4: DASHBOARD PREVIEW (placeholder) ========== -->
+    <section id="dashboard-screen" class="screen" aria-labelledby="dash-heading" aria-hidden="true" inert>
+      <div class="sheet dash">
+        <span class="tape" aria-hidden="true"></span>
+        <h2 id="dash-heading" tabindex="-1">Welcome to Your Little World</h2>
+        <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+        <p class="message">Eleven little doors. Each holding something from my heart.</p>
+
+        <ol class="doors" aria-label="Eleven doors">
+          <li><button class="door" type="button" data-door="1" aria-disabled="true"><span>1</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="2" aria-disabled="true"><span>2</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="3" aria-disabled="true"><span>3</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="4" aria-disabled="true"><span>4</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="5" aria-disabled="true"><span>5</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="6" aria-disabled="true"><span>6</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="7" aria-disabled="true"><span>7</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="8" aria-disabled="true"><span>8</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="9" aria-disabled="true"><span>9</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="10" aria-disabled="true"><span>10</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="11" aria-disabled="true"><span>11</span><i class="lock" aria-hidden="true"></i></button></li>
+        </ol>
+
+        <p class="door-msg" id="door-msg" role="status" hidden></p>
+
+        <p class="hand small note">New surprises will unlock as the days pass, one door at a time, until your day arrives.</p>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 5: DOOR 1, TEN MONTHS OF US ========== -->
+    <section id="door1-screen" class="screen" aria-labelledby="door1-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back>← Back to the doors</button></div>
+
+        <article class="sheet letter">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+
+          <p class="hand">Day 01</p>
+          <p class="date-label">November 1, 2026</p>
+          <h2 id="door1-heading" tabindex="-1">Ten Months of Us ❤️</h2>
+          <p class="sub">A little look at how our story has been unfolding...</p>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+          <!-- Polaroid. The photo is assets/day1.jpg. Until it exists, the placeholder shows. -->
+          <figure class="polaroid reveal">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="photo-frame" id="day1-frame">
+              <div class="photo-ph" aria-hidden="true"><b>♡</b><span>Our photograph<br>will live here</span></div>
+              <img src="assets/day1.jpg" alt="Michelle and me on our first date at Leonia Park" decoding="async">
+            </div>
+            <figcaption>Our first date ♡ Leonia Park, Namugongo</figcaption>
+          </figure>
+
+          <p class="salute reveal">My Michelle,</p>
+
+          <p class="reveal">Ten months. Sometimes I sit and think about how far we’ve come, and honestly, there’s so much that comes to mind. But if there’s one memory I could revisit over and over again, it would be our first date at Leonia Park, Namugongo.</p>
+          <p class="aside reveal">My goodness, I remember that day. 😹❤️</p>
+          <p class="reveal">I remember how you came late, and I remember exactly how you were dressed. You looked so sexy and cute, and I don’t think you even understood how beautiful you looked to me that day. But what I remember most are those never-ending smiles of yours. I loved every moment of being there with you. I wanted time to slow down a little because I was genuinely enjoying having you beside me.</p>
+          <p class="aside reveal">And then there’s our first kiss. ❤️</p>
+          <p class="reveal">I remember every detail of it. It’s one of those moments that stays with you, not because it was some grand event, but because of who you shared it with. That day became more than just our first date. It became one of those memories I’ll always carry with me.</p>
+          <p class="standalone reveal">And look at us now. Ten months later.</p>
+          <p class="reveal">We’ve had our beautiful moments, our random quarrels, times when we’ve misunderstood each other, and moments when we’ve let each other down. We haven’t always gotten everything right. But somehow, even after the difficult moments, we keep finding our way back to each other.</p>
+          <p class="reveal">I think that’s one of the things that makes our story special to me. We’re still learning, still growing, still discovering how to love each other better.</p>
+          <p class="reveal">When I look back at these ten months, the feeling that stands out most is being loved and having someone to love right back. Knowing that there’s someone whose presence can make an ordinary day feel special. Someone whose smile I could never get tired of seeing.</p>
+          <p class="reveal">I’m grateful for you, Ma Chérie. For the memories we’ve made, the lessons we’ve learned, and even the moments that have challenged us.</p>
+          <p class="reveal">If I could go back to that first date, I’d still choose to show up, wait for you, enjoy those endless smiles and steal that first kiss all over again.</p>
+          <p class="standalone reveal">And if I had the chance to choose again, I’d still choose you.</p>
+
+          <p class="closing reveal"><strong>Happy ten months to us, My Michelle. Here’s to the story we’re still writing. ❤️</strong></p>
+
+          <button class="btn alt" type="button" data-back>Back to the Doors</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 6: DOOR 2, THE LITTLE THINGS I LOVE ABOUT YOU ========== -->
+    <section id="door2-screen" class="screen" aria-labelledby="door2-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back>← Back to the doors</button></div>
+
+        <article class="sheet letter">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+
+          <p class="hand">Day 02</p>
+          <p class="date-label">November 2, 2026</p>
+          <h2 id="door2-heading" tabindex="-1">The Little Things I Love About You ❤️</h2>
+          <p class="sub">You probably don’t realise just how many little things make you special to me.</p>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+          <p class="salute reveal">My Michelle,</p>
+          <p class="aside reveal">Where do I even begin? 😹</p>
+          <p class="reveal">I could talk about your beauty, but that would barely scratch the surface. It’s the little things about you that get me every single time.</p>
+
+          <div class="notes">
+            <div class="note reveal">
+              <span class="tag">your smile</span>
+              <h3>First, YOUR SMILE. ❤️</h3>
+              <p>Especially when I tell you something sweet and you start smiling or blushing. You have no idea how much I enjoy that. The funny thing is, I end up smiling too. Sometimes I just want to keep saying sweet things to you because seeing that reaction makes me ridiculously happy.</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">your shy side</span>
+              <p>And your shyness! There’s something about those moments when you become shy that I find so attractive. That innocent side of you is one of my favourite things. But don’t get too comfortable, because I also know how stubborn you can become. 😹 You really know how to keep me on my toes.</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">that look</span>
+              <p>And speaking of keeping me on my toes... there’s that look you give me when you’re annoyed. Especially when you decide to ignore me. 😂 I don’t know whether I’m supposed to apologise, laugh or try harder to win you back. Sometimes that little expression of yours is just too funny.</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">little feet</span>
+              <h3>Then there’s your feet. 😭❤️</h3>
+              <p>Ma Chérie, I genuinely believe nobody else has feet as small and cute as yours. I don’t know why I find that detail so adorable, but I do. It’s one of those random little things that make me think, “That’s my girl.”</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">your eyes</span>
+              <p>And your eyes... the way you look at me. I honestly don’t think another girl could look at me quite the way you do. There’s something about that look that feels uniquely yours, and I wouldn’t trade it for anything.</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">how you care</span>
+              <h3>But beyond all those things, I love the way you show that you care.</h3>
+              <p>When you ask me how my day has been, when you check on me, when you send me one of your sweet voice notes, those little gestures mean more than you might realise. They remind me that I’m not just someone you talk to, but someone you genuinely think about.</p>
+              <p>And I hope you never stop doing those little things.</p>
+            </div>
+
+            <div class="note summary reveal">
+              <span class="tag">all of it</span>
+              <p>I love your smiles, your blushes, your shyness, your stubborn moments, your funny moods, your little feet and even those looks you give me when you’re mad. 😂</p>
+              <p>Basically, I love all these little pieces that make you MY Michelle.</p>
+              <p>You don’t have to do anything extraordinary to make me happy. Sometimes you just have to be yourself.</p>
+            </div>
+          </div>
+
+          <p class="closing reveal"><strong>Never underestimate how special you are to me, Ma Chérie. I notice more than you think, and I love more than I sometimes manage to say. ❤️</strong></p>
+
+          <button class="btn alt" type="button" data-back>Back to the Doors</button>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
