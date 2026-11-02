@@ -18,6 +18,36 @@
     el.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: block });
   }
 
+  /* ---------- 0. Private little welcome gate ---------- */
+  var passwordGate = document.getElementById('password-gate');
+  var passwordForm = document.getElementById('password-form');
+  var passwordInput = document.getElementById('site-password');
+  var passwordError = document.getElementById('password-error');
+  var siteMain = document.querySelector('main');
+  var SITE_CODE = '1111';
+
+  passwordInput.focus();
+  passwordForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (passwordInput.value !== SITE_CODE) {
+      passwordInput.value = '';
+      passwordInput.setAttribute('aria-invalid', 'true');
+      passwordError.hidden = false;
+      passwordInput.focus();
+      return;
+    }
+
+    passwordInput.removeAttribute('aria-invalid');
+    passwordError.hidden = true;
+    siteMain.inert = false;
+    passwordGate.classList.add('is-unlocked');
+    passwordGate.setAttribute('aria-hidden', 'true');
+    setTimeout(function () {
+      passwordGate.hidden = true;
+      document.getElementById('enter-btn').focus({ preventScroll: true });
+    }, motionDelay(360));
+  });
+
   /* ---------- 1. Countdown ---------- */
   // Midnight at the start of 11 November 2026 in Kampala (+03:00)
   var TARGET = new Date('2026-11-11T00:00:00+03:00').getTime();

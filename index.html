@@ -22,7 +22,23 @@
     <span style="--x:14%; --y:91%; --d:1.9s;--s:.9rem">♡</span>
   </div>
 
-  <main>
+  <section id="password-gate" class="password-gate" aria-labelledby="password-title">
+    <div class="password-card">
+      <span class="password-ornament" aria-hidden="true">✦</span>
+      <p class="hand">A little heavenly secret...</p>
+      <h1 id="password-title">Unlock the Gate to Heaven</h1>
+      <p class="password-prompt">Enter the code to step inside.</p>
+      <form id="password-form" novalidate>
+        <label class="password-label" for="site-password">Our four-digit code</label>
+        <input id="site-password" name="password" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" required aria-describedby="password-hint password-error">
+        <p id="password-hint" class="password-hint">Four little numbers stand between you and your surprise. ❤️</p>
+        <p id="password-error" class="password-error" role="alert" hidden>That isn't quite it, My Michelle. Try again ❤️</p>
+        <button class="btn" type="submit">Open the Gate</button>
+      </form>
+    </div>
+  </section>
+
+  <main inert>
 
     <!-- ========== SCREEN 1: WELCOME ========== -->
     <section id="welcome" class="screen is-active" aria-labelledby="title">
