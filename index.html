@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#701D38">
+  <title>To My Michelle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-mood="day">
+
+  <!-- Soft paper grain + drifting details (purely decorative) -->
+  <!-- Atmosphere: daylight, twilight, breathing light, drifting stars (decorative) -->
+  <div class="atmos" aria-hidden="true"><span class="atmos-day"></span><span class="atmos-dusk"></span><span class="atmos-glow"></span><span class="atmos-stars"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="drift" aria-hidden="true">
+    <span style="--x:8%;  --y:12%; --d:0s;  --s:1.1rem">✦</span>
+    <span style="--x:86%; --y:9%;  --d:1.4s;--s:.9rem">♡</span>
+    <span style="--x:92%; --y:44%; --d:2.2s;--s:1rem">✦</span>
+    <span style="--x:5%;  --y:62%; --d:.8s; --s:1rem">♡</span>
+    <span style="--x:80%; --y:86%; --d:3s;  --s:1.2rem">✦</span>
+    <span style="--x:14%; --y:91%; --d:1.9s;--s:.9rem">♡</span>
+  </div>
+
+  <main>
+
+    <!-- ========== SCREEN 1: WELCOME ========== -->
+    <section id="welcome" class="screen is-active" aria-labelledby="title">
+      <div class="paper">
+        <span class="tape" aria-hidden="true"></span>
+
+        <p class="hand">A little something, made just for you...</p>
+        <h1 id="title">To My Michelle</h1>
+        <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+        <p class="message">
+          I made this with you in mind, one small piece at a time.
+          Take your time, open everything, and know that every bit of it is meant for you.
+        </p>
+
+        <!-- Countdown (filled in by script.js) -->
+        <div id="countdown-wrap">
+          <p class="hand small" id="countdown-label">Until your day, 11 November</p>
+          <div class="countdown" id="countdown" role="timer" aria-live="off">
+            <div class="unit"><span id="cd-days">--</span><small>days</small></div>
+            <div class="unit"><span id="cd-hours">--</span><small>hours</small></div>
+            <div class="unit"><span id="cd-minutes">--</span><small>minutes</small></div>
+            <div class="unit"><span id="cd-seconds">--</span><small>seconds</small></div>
+          </div>
+        </div>
+
+        <!-- Shown instead of the countdown once the birthday arrives -->
+        <div id="birthday-note" class="birthday-note" hidden>
+          <p class="hand">It's today, My Michelle.</p>
+          <p class="message">Happy Birthday. This whole day belongs to you.</p>
+        </div>
+
+        <button id="enter-btn" class="btn" type="button">Enter My Little World</button>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 2: ENVELOPE PLACEHOLDER ========== -->
+    <section id="envelope-screen" class="screen" aria-labelledby="env-text" aria-hidden="true" inert>
+      <div class="env-wrap">
+        <p class="hand" id="env-text">There's a little letter waiting for you...</p>
+
+        <div class="envelope" id="envelope">
+          <div class="env-back"></div>
+          <div class="env-card" aria-hidden="true"><span>For My Michelle</span></div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+          <div class="env-seal" aria-hidden="true">♡</div>
+        </div>
+
+        <button id="open-btn" class="btn" type="button">Open the Envelope</button>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 3: THE LETTER ========== -->
+    <section id="letter-screen" class="screen" aria-labelledby="letter-heading" aria-hidden="true" inert>
+      <article class="sheet letter">
+        <span class="corner tl" aria-hidden="true"></span>
+        <span class="corner br" aria-hidden="true"></span>
+
+        <p class="hand rv" style="--i:0">A Letter From Me to You</p>
+        <h2 id="letter-heading" class="rv" style="--i:1" tabindex="-1">To My Michelle ❤️</h2>
+        <p class="rule rv" style="--i:2" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+        <p class="salute rv" style="--i:3">My Michelle,</p>
+
+        <p class="rv" style="--i:4">If there’s one thing I hope you feel as you explore this little world I’ve made for you, it’s how much you mean to me.</p>
+        <p class="rv" style="--i:5">Today is special in more ways than one. Not only are we getting closer to your birthday, but we’re also celebrating ten months of us. Ten months of learning each other, making memories, laughing, loving, and figuring things out along the way. When I think about how far we’ve come, I can’t help but smile.</p>
+        <p class="rv" style="--i:6">You know, there’s something about being with you that makes even the simplest moments feel special. It doesn’t always have to be somewhere fancy or some big occasion. Sometimes, just being around you, talking to you, holding you close or simply looking at you is enough to make my day. You have this way of making ordinary moments mean so much more to me.</p>
+        <p class="rv" style="--i:7">And I know our journey hasn’t always been smooth. We’ve had our ups and downs, moments when we didn’t understand each other, moments when things got difficult, and times when loving each other required a little more patience. But through it all, here we are. Still choosing each other. Still growing. Still us.</p>
+        <p class="rv standalone" style="--i:8">I want you to know that I don’t take that for granted.</p>
+        <p class="rv" style="--i:9">I love you, Michelle. More than I probably manage to express sometimes. I love the person you are, the little things that make you you, and the happiness that comes with having you in my life.</p>
+        <p class="rv" style="--i:10">And when I say I want to go far with you, I mean it. Not only when everything is beautiful and easy, but also when life gets difficult. I’m willing to keep learning, growing, understanding and working towards the kind of love we both deserve. I don’t just want beautiful moments with you. I want a future with you.</p>
+        <p class="rv" style="--i:11">You’re the woman I see myself sharing this life with. The one I want beside me through the different seasons of life, the achievements, the challenges, the quiet days and all the adventures still waiting for us.</p>
+        <p class="rv" style="--i:12">So, my Michelle, as your special day gets closer, I hope you remember that you’re loved. Deeply, genuinely and intentionally.</p>
+        <p class="rv" style="--i:13">This little world is only a small expression of everything I wish I could put into words. Take your time exploring it. There’s a little piece of my heart waiting for you in every corner.</p>
+        <p class="rv" style="--i:14">Happy ten months to us, my love. And here’s to all the beautiful chapters we haven’t written yet.</p>
+
+        <p class="closing rv" style="--i:15"><strong>I love you, My Michelle. Always yours. ❤️</strong></p>
+
+        <button id="continue-btn" class="btn" type="button">Continue, My Love</button>
+      </article>
+    </section>
+
+    <!-- ========== SCREEN 4: DASHBOARD PREVIEW (placeholder) ========== -->
+    <section id="dashboard-screen" class="screen" aria-labelledby="dash-heading" aria-hidden="true" inert>
+      <div class="sheet dash">
+        <span class="tape" aria-hidden="true"></span>
+        <h2 id="dash-heading" tabindex="-1">Welcome to Your Little World</h2>
+        <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+        <p class="message">Eleven little doors. Each holding something from my heart.</p>
+
+        <div class="door-progress" aria-label="Birthday door availability">
+          <div class="door-progress-copy"><span>THE SURPRISES</span><strong id="door-progress-label" aria-live="polite">0 of 11 doors available</strong></div>
+          <div class="door-progress-track" role="progressbar" aria-label="Doors available" aria-valuemin="0" aria-valuemax="11" aria-valuenow="0" aria-valuetext="0 of 11 doors available"><span id="door-progress-fill"></span></div>
+        </div>
+
+        <ol class="doors" aria-label="Eleven doors">
+          <li><button class="door" type="button" data-door="1" aria-disabled="true"><span>1</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="2" aria-disabled="true"><span>2</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="3" aria-disabled="true"><span>3</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="4" aria-disabled="true"><span>4</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="5" aria-disabled="true"><span>5</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="6" aria-disabled="true"><span>6</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="7" aria-disabled="true"><span>7</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="8" aria-disabled="true"><span>8</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="9" aria-disabled="true"><span>9</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="10" aria-disabled="true"><span>10</span><i class="lock" aria-hidden="true"></i></button></li>
+          <li><button class="door" type="button" data-door="11" aria-disabled="true"><span>11</span><i class="lock" aria-hidden="true"></i></button></li>
+        </ol>
+
+        <p class="door-msg" id="door-msg" role="status" hidden></p>
+
+        <p class="hand small note">New surprises will unlock as the days pass, one door at a time, until your day arrives.</p>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 5: DOOR 1, TEN MONTHS OF US ========== -->
+    <section id="door1-screen" class="screen" aria-labelledby="door1-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back>← Back to the doors</button></div>
+
+        <article class="sheet letter">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+
+          <p class="hand">Day 01</p>
+          <p class="date-label">November 1, 2026</p>
+          <h2 id="door1-heading" tabindex="-1">Ten Months of Us ❤️</h2>
+          <p class="sub">A little look at how our story has been unfolding...</p>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+          <!-- Polaroid. The photo is assets/day1.jpg. Until it exists, the placeholder shows. -->
+          <figure class="polaroid reveal">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="photo-frame" id="day1-frame">
+              <div class="photo-ph" aria-hidden="true"><b>♡</b><span>Our photograph<br>will live here</span></div>
+              <img src="assets/day1.jpg" alt="Michelle and me on our first date at Leonia Park" loading="lazy" decoding="async">
+            </div>
+            <figcaption>Our first date ♡ Leonia Park, Namugongo</figcaption>
+          </figure>
+
+          <p class="salute reveal">My Michelle,</p>
+
+          <p class="reveal">Ten months. Sometimes I sit and think about how far we’ve come, and honestly, there’s so much that comes to mind. But if there’s one memory I could revisit over and over again, it would be our first date at Leonia Park, Namugongo.</p>
+          <p class="aside reveal">My goodness, I remember that day. 😹❤️</p>
+          <p class="reveal">I remember how you came late, and I remember exactly how you were dressed. You looked so sexy and cute, and I don’t think you even understood how beautiful you looked to me that day. But what I remember most are those never-ending smiles of yours. I loved every moment of being there with you. I wanted time to slow down a little because I was genuinely enjoying having you beside me.</p>
+          <p class="aside reveal">And then there’s our first kiss. ❤️</p>
+          <p class="reveal">I remember every detail of it. It’s one of those moments that stays with you, not because it was some grand event, but because of who you shared it with. That day became more than just our first date. It became one of those memories I’ll always carry with me.</p>
+          <p class="standalone reveal">And look at us now. Ten months later.</p>
+          <p class="reveal">We’ve had our beautiful moments, our random quarrels, times when we’ve misunderstood each other, and moments when we’ve let each other down. We haven’t always gotten everything right. But somehow, even after the difficult moments, we keep finding our way back to each other.</p>
+          <p class="reveal">I think that’s one of the things that makes our story special to me. We’re still learning, still growing, still discovering how to love each other better.</p>
+          <p class="reveal">When I look back at these ten months, the feeling that stands out most is being loved and having someone to love right back. Knowing that there’s someone whose presence can make an ordinary day feel special. Someone whose smile I could never get tired of seeing.</p>
+          <p class="reveal">I’m grateful for you, Ma Chérie. For the memories we’ve made, the lessons we’ve learned, and even the moments that have challenged us.</p>
+          <p class="reveal">If I could go back to that first date, I’d still choose to show up, wait for you, enjoy those endless smiles and steal that first kiss all over again.</p>
+          <p class="standalone reveal">And if I had the chance to choose again, I’d still choose you.</p>
+
+          <p class="closing reveal"><strong>Happy ten months to us, My Michelle. Here’s to the story we’re still writing. ❤️</strong></p>
+
+          <button class="btn alt" type="button" data-back>Back to the Doors</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 6: DOOR 2, THE LITTLE THINGS I LOVE ABOUT YOU ========== -->
+    <section id="door2-screen" class="screen" aria-labelledby="door2-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back>← Back to the doors</button></div>
+
+        <article class="sheet letter">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+
+          <p class="hand">Day 02</p>
+          <p class="date-label">November 2, 2026</p>
+          <h2 id="door2-heading" tabindex="-1">The Little Things I Love About You ❤️</h2>
+          <p class="sub">You probably don’t realise just how many little things make you special to me.</p>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+          <p class="salute reveal">My Michelle,</p>
+          <p class="aside reveal">Where do I even begin? 😹</p>
+          <p class="reveal">I could talk about your beauty, but that would barely scratch the surface. It’s the little things about you that get me every single time.</p>
+
+          <div class="notes">
+            <div class="note reveal">
+              <span class="tag">your smile</span>
+              <h3>First, YOUR SMILE. ❤️</h3>
+              <p>Especially when I tell you something sweet and you start smiling or blushing. You have no idea how much I enjoy that. The funny thing is, I end up smiling too. Sometimes I just want to keep saying sweet things to you because seeing that reaction makes me ridiculously happy.</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">your shy side</span>
+              <p>And your shyness! There’s something about those moments when you become shy that I find so attractive. That innocent side of you is one of my favourite things. But don’t get too comfortable, because I also know how stubborn you can become. 😹 You really know how to keep me on my toes.</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">that look</span>
+              <p>And speaking of keeping me on my toes... there’s that look you give me when you’re annoyed. Especially when you decide to ignore me. 😂 I don’t know whether I’m supposed to apologise, laugh or try harder to win you back. Sometimes that little expression of yours is just too funny.</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">little feet</span>
+              <h3>Then there’s your feet. 😭❤️</h3>
+              <p>Ma Chérie, I genuinely believe nobody else has feet as small and cute as yours. I don’t know why I find that detail so adorable, but I do. It’s one of those random little things that make me think, “That’s my girl.”</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">your eyes</span>
+              <p>And your eyes... the way you look at me. I honestly don’t think another girl could look at me quite the way you do. There’s something about that look that feels uniquely yours, and I wouldn’t trade it for anything.</p>
+            </div>
+
+            <div class="note reveal">
+              <span class="tag">how you care</span>
+              <h3>But beyond all those things, I love the way you show that you care.</h3>
+              <p>When you ask me how my day has been, when you check on me, when you send me one of your sweet voice notes, those little gestures mean more than you might realise. They remind me that I’m not just someone you talk to, but someone you genuinely think about.</p>
+              <p>And I hope you never stop doing those little things.</p>
+            </div>
+
+            <div class="note summary reveal">
+              <span class="tag">all of it</span>
+              <p>I love your smiles, your blushes, your shyness, your stubborn moments, your funny moods, your little feet and even those looks you give me when you’re mad. 😂</p>
+              <p>Basically, I love all these little pieces that make you MY Michelle.</p>
+              <p>You don’t have to do anything extraordinary to make me happy. Sometimes you just have to be yourself.</p>
+            </div>
+          </div>
+
+          <p class="closing reveal"><strong>Never underestimate how special you are to me, Ma Chérie. I notice more than you think, and I love more than I sometimes manage to say. ❤️</strong></p>
+
+          <button class="btn alt" type="button" data-back>Back to the Doors</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 7: DOOR 3, OUR NEXT ADVENTURES ========== -->
+    <section id="door3-screen" class="screen" aria-labelledby="door3-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back>← Back to the doors</button></div>
+
+        <article class="sheet letter">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+
+          <!-- Intro -->
+          <p class="hand rv" style="--i:0">Day 03</p>
+          <p class="date-label rv" style="--i:1">NOVEMBER 3, 2026</p>
+          <h2 id="door3-heading" class="rv" style="--i:2" tabindex="-1">Our Next Adventures ❤️</h2>
+          <p class="sub rv" style="--i:3">A little wishlist for two.</p>
+          <p class="rule rv" style="--i:4" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+          <p class="salute rv" style="--i:5">My Michelle,</p>
+          <p class="rv" style="--i:6">We’ve made some beautiful memories already, but I have a feeling our best ones are still waiting for us.</p>
+          <p class="rv" style="--i:7">There are places I want us to visit, experiences I want us to share, and little adventures I want us to have together.</p>
+          <p class="rv" style="--i:8">So today, I thought we’d do something a little different.</p>
+          <p class="rv" style="--i:9">I’ve put together three things I’d really love us to experience. But this time, I also want to hear what YOU have in mind.</p>
+          <p class="aside rv" style="--i:10">After all, our next memories should be imagined by both of us. ❤️</p>
+
+          <!-- Three adventures -->
+          <h3 class="sec-title">Three adventures I’ve been imagining</h3>
+          <p class="sec-hint">Tap the ones you’d love. Choose any, all, or none yet.</p>
+
+          <div class="adventures" id="d3-adventures">
+            <div class="adv reveal">
+              <input class="adv-input" type="checkbox" id="adv-dinner" value="dinner">
+              <label class="adv-card" for="adv-dinner">
+                <span class="photo-frame adv-photo">
+                  <span class="photo-ph" aria-hidden="true"><b>♡</b><span>Our dinner and swim<br>photo goes here</span></span>
+                  <img src="assets/day3-restaurant.jpg" alt="" loading="lazy" decoding="async">
+                  <span class="adv-num">Adventure 01</span>
+                </span>
+                <span class="adv-title">Dinner, Then a Swim 🥂</span>
+                <span class="adv-p">I want to take you somewhere really beautiful. A fancy restaurant with a swimming pool, where we can dress up, enjoy a lovely dinner together and then later get into the pool and enjoy the rest of the evening.</span>
+                <span class="adv-p">Just imagine us spending that kind of evening together. I think it’d be lovely.</span>
+                <span class="adv-ind"><i class="adv-box" aria-hidden="true"></i><span class="adv-off">Tap to choose this one</span><span class="adv-on">Chosen ♥</span></span>
+              </label>
+            </div>
+
+            <div class="adv reveal">
+              <input class="adv-input" type="checkbox" id="adv-driving" value="driving">
+              <label class="adv-card" for="adv-driving">
+                <span class="photo-frame adv-photo">
+                  <span class="photo-ph" aria-hidden="true"><b>♡</b><span>Your turn at the wheel<br>photo goes here</span></span>
+                  <img src="assets/day3-driving.jpg" alt="" loading="lazy" decoding="async">
+                  <span class="adv-num">Adventure 02</span>
+                </span>
+                <span class="adv-title">Your Turn Behind the Wheel 🚗</span>
+                <span class="adv-p">We’ve driven each other around before, but I want us to take turns driving.</span>
+                <span class="adv-p">I’ve had my turn driving you, but you haven’t really had yours driving me around. 😹</span>
+                <span class="adv-p">I want to experience being your passenger for a change, enjoying the ride and probably teasing you a little along the way.</span>
+                <span class="adv-ind"><i class="adv-box" aria-hidden="true"></i><span class="adv-off">Tap to choose this one</span><span class="adv-on">Chosen ♥</span></span>
+              </label>
+            </div>
+
+            <div class="adv reveal">
+              <input class="adv-input" type="checkbox" id="adv-picnic" value="picnic">
+              <label class="adv-card" for="adv-picnic">
+                <span class="photo-frame adv-photo">
+                  <span class="photo-ph" aria-hidden="true"><b>♡</b><span>Our picnic day<br>photo goes here</span></span>
+                  <img src="assets/day3-picnic.jpg" alt="" loading="lazy" decoding="async">
+                  <span class="adv-num">Adventure 03</span>
+                </span>
+                <span class="adv-title">A Whole Day Just for Us 🌅</span>
+                <span class="adv-p">Imagine a spontaneous little getaway or picnic. No rushing, no distractions, just us enjoying each other’s company.</span>
+                <span class="adv-p">Taking pictures, laughing, talking about everything and absolutely nothing, and making another memory we’ll look back on.</span>
+                <span class="adv-ind"><i class="adv-box" aria-hidden="true"></i><span class="adv-off">Tap to choose this one</span><span class="adv-on">Chosen ♥</span></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Her three wishes -->
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <h3 class="sec-title">Now, tell me your three wishes ❤️</h3>
+          <p>I’ve told you three things I’d love us to experience. But I don’t want this to be only about my ideas.</p>
+          <p>I want to know what’s on YOUR mind too.</p>
+          <p>If you could plan three experiences for us, what would they be?</p>
+          <p>They can be romantic, adventurous, funny, simple or completely random. I want to hear them all.</p>
+
+          <div class="wish-form" id="d3-form">
+            <label class="wish-field"><span class="wish-label">My wish 01</span>
+              <input id="d3-wish1" type="text" maxlength="200" autocomplete="off" enterkeyhint="next" placeholder="Somewhere I want us to go..."></label>
+            <label class="wish-field"><span class="wish-label">My wish 02</span>
+              <input id="d3-wish2" type="text" maxlength="200" autocomplete="off" enterkeyhint="next" placeholder="Something I want us to try..."></label>
+            <label class="wish-field"><span class="wish-label">My wish 03</span>
+              <input id="d3-wish3" type="text" maxlength="200" autocomplete="off" enterkeyhint="next" placeholder="Something I’ve always imagined..."></label>
+            <label class="wish-field"><span class="wish-label">Anything else you want him to know? ❤️</span>
+              <textarea id="d3-msg" rows="4" maxlength="1000" placeholder="A little extra message for him..."></textarea></label>
+
+            <p class="form-msg" id="d3-error" role="alert" hidden>Choose at least one adventure or write one wish first, My Michelle ❤️</p>
+            <button class="btn" id="d3-save" type="button">Save Our Adventure Wishlist ❤️</button>
+          </div>
+
+          <!-- Revealed after saving -->
+          <div class="after" id="d3-after" hidden>
+            <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+            <p class="hand env-lead">One last thing from me...</p>
+
+            <div class="envelope env3" id="d3-envelope" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to open the envelope">
+              <div class="env-back"></div>
+              <div class="env-card" aria-hidden="true"><span>For My Michelle</span></div>
+              <div class="env-front"></div>
+              <div class="env-flap"></div>
+              <div class="env-seal" aria-hidden="true">♡</div>
+            </div>
+            <p class="hand small env-hint" id="d3-env-hint">Tap the envelope to open it</p>
+
+            <div class="final-note" id="d3-final" hidden>
+              <p class="salute">My Michelle,</p>
+              <p>I hope we get to do all these things. But even if our plans change, I hope we never stop finding little ways to enjoy each other.</p>
+              <p>I want the spontaneous dates, the long conversations, the silly moments, the unexpected adventures and even the ordinary days.</p>
+              <p>The destination matters, but having you beside me matters more.</p>
+              <p>And now I have your little wishlist too. Looks like we have some dates to plan. 😹❤️</p>
+              <p>I hope you’re ready, Ma Chérie.</p>
+              <p>To many more adventures together.</p>
+              <p class="closing"><strong>Our story isn’t finished yet. ❤️</strong></p>
+            </div>
+
+            <div class="share" id="d3-share" hidden>
+              <h3 class="sec-title small">Send me your wishlist ❤️</h3>
+              <p class="sec-hint">Nothing is sent automatically. Tap the button to copy your wishlist, then paste it into a message and send it to me.</p>
+              <textarea id="d3-summary" class="summary" rows="12" readonly aria-label="Your wishlist summary"></textarea>
+              <button class="btn" id="d3-copy" type="button">Copy Our Wishlist</button>
+              <p class="form-msg ok" id="d3-copy-msg" role="status" hidden></p>
+            </div>
+          </div>
+
+          <button class="btn alt" type="button" data-back>Back to the Doors</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 8: DOOR 4, LITTLE NOTES FOR YOUR HEART (envelope selection) ========== -->
+    <section id="door4-screen" class="screen" aria-labelledby="door4-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back>← Back to the doors</button></div>
+
+        <article class="sheet letter">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+
+          <p class="hand rv" style="--i:0">Day 04</p>
+          <p class="date-label rv" style="--i:1">NOVEMBER 4, 2026</p>
+          <h2 id="door4-heading" class="rv" style="--i:2" tabindex="-1">Little Notes for Your Heart ❤️</h2>
+          <p class="sub rv" style="--i:3">Three little reminders, for whenever you need them.</p>
+          <p class="rule rv" style="--i:4" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+          <p class="salute rv" style="--i:5">My Michelle,</p>
+          <p class="rv" style="--i:6">There are days when I wish I could simply be beside you. Days when I’d love to spend the whole afternoon with you, hear about everything happening in your world, make you laugh, or just enjoy having you around.</p>
+          <p class="rv" style="--i:7">But I know we don’t always get to spend as much time together as we’d like. Sometimes circumstances make it difficult, and I understand that.</p>
+          <p class="rv" style="--i:8">So today, I made you three little notes.</p>
+          <p class="rv" style="--i:9">Each one has something I want you to remember, depending on the kind of day you’re having.</p>
+          <p class="aside rv" style="--i:10">Open whichever one your heart needs first, Ma Chérie. ❤️</p>
+
+          <!-- Transition into the envelopes -->
+          <p class="rule n4-bridge" aria-hidden="true"><i></i><b>♡</b><i></i></p>
+          <p class="hand n4-lead">Three little notes are waiting for you...</p>
+          <p class="n4-progress" id="n4-progress" role="status" aria-live="polite">0 of 3 notes opened</p>
+
+          <div class="n4-envs" id="n4-envs">
+            <span class="n4-float" style="--x:4%;--y:8%" aria-hidden="true">♡</span>
+            <span class="n4-float" style="--x:90%;--y:44%" aria-hidden="true">✦</span>
+            <span class="n4-float" style="--x:8%;--y:80%" aria-hidden="true">♡</span>
+            <button class="n4-env n4-env--cream reveal" type="button" data-note="1" aria-label="Open When You Miss Me ❤️. For those moments when you wish I were right there beside you.">
+              <span class="n4-badge" aria-hidden="true">OPENED ❤️</span>
+              <span class="n4-art" aria-hidden="true"><span class="n4-back"></span><span class="n4-card">♡</span><span class="n4-front"></span><span class="n4-flap"></span><span class="n4-seal">♥</span></span>
+              <span class="n4-title">Open When You Miss Me ❤️</span>
+              <span class="n4-hint">For those moments when you wish I were right there beside you.</span>
+            </button>
+            <button class="n4-env n4-env--blush reveal" type="button" data-note="2" aria-label="Open When You’ve Had a Bad Day ❤️. For the days when everything feels a little too much.">
+              <span class="n4-badge" aria-hidden="true">OPENED ❤️</span>
+              <span class="n4-art" aria-hidden="true"><span class="n4-back"></span><span class="n4-card">♡</span><span class="n4-front"></span><span class="n4-flap"></span><span class="n4-seal">♥</span></span>
+              <span class="n4-title">Open When You’ve Had a Bad Day ❤️</span>
+              <span class="n4-hint">For the days when everything feels a little too much.</span>
+            </button>
+            <button class="n4-env n4-env--wine reveal" type="button" data-note="3" aria-label="Open When You Need a Reminder ❤️. A reminder of something I hope you never doubt.">
+              <span class="n4-badge" aria-hidden="true">OPENED ❤️</span>
+              <span class="n4-art" aria-hidden="true"><span class="n4-back"></span><span class="n4-card">♡</span><span class="n4-front"></span><span class="n4-flap"></span><span class="n4-seal">♥</span></span>
+              <span class="n4-title">Open When You Need a Reminder ❤️</span>
+              <span class="n4-hint">A reminder of something I hope you never doubt.</span>
+            </button>
+          </div>
+
+          <!-- Revealed once all three notes have been opened -->
+          <div class="n4-final" id="n4-final" hidden>
+            <p class="salute">My Michelle,</p>
+            <p>I might not always be physically beside you, but I hope you never have to question whether you have someone who genuinely cares about you.</p>
+            <p class="standalone">You do.</p>
+            <p class="standalone">And that someone is me. ❤️</p>
+            <p>No matter what kind of day you’re having, I hope you always remember that you’re loved.</p>
+            <p class="sign">Always, Ma Chérie.</p>
+            <p class="closing"><strong>A little reminder from your boy, with love. ❤️</strong></p>
+          </div>
+
+          <button class="btn alt" type="button" data-back>Back to the Doors</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== LETTER 1: Open When You Miss Me ❤️ ========== -->
+    <section id="note1-screen" class="screen" aria-labelledby="note1-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-env>← Back to the envelopes</button></div>
+        <article class="sheet letter n4-letter n4-letter--cream">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <span class="n4-wax" aria-hidden="true">♥</span>
+          <p class="hand">Note 1 of 3</p>
+          <h2 id="note1-heading" tabindex="-1">Open When You Miss Me ❤️</h2>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <p class="salute">My Michelle,</p>
+          <p>I know there are moments when you wish I could be around more. And trust me, I wish the same thing.</p>
+          <p>Sometimes I think about how nice it would be to have more ordinary days with you. Not necessarily doing anything extraordinary. Just being around each other, taking little walks, talking about random things, laughing at silly jokes, or simply enjoying the fact that we’re together.</p>
+          <p>I know we can’t always make that happen. There are circumstances and things we both have to work around. But I hope you never mistake the times when I’m not physically beside you for moments when you’re not on my mind.</p>
+          <p>I miss you too, bby. Probably more than I manage to say sometimes.</p>
+          <p>And when I imagine the days ahead, I look forward to a time when spending time together won’t have to feel like something we have to carefully plan around everything else.</p>
+          <p>Until then, please remember that distance and busy days don’t change how much you mean to me.</p>
+          <p>If I could teleport right now, I’d probably already be bothering you. 😹❤️</p>
+          <p class="closing"><strong>I miss you, Ma Chérie.</strong></p>
+          <button class="btn" type="button" data-back-env>Back to the Envelopes</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== LETTER 2: Open When You’ve Had a Bad Day ❤️ ========== -->
+    <section id="note2-screen" class="screen" aria-labelledby="note2-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-env>← Back to the envelopes</button></div>
+        <article class="sheet letter n4-letter n4-letter--blush">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <span class="n4-wax" aria-hidden="true">♥</span>
+          <p class="hand">Note 2 of 3</p>
+          <h2 id="note2-heading" tabindex="-1">Open When You’ve Had a Bad Day ❤️</h2>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <p class="salute">My girl,</p>
+          <p>First, come here. Sending you the biggest virtual hug. ❤️</p>
+          <p>I don’t know what kind of day you’ve had, or what might be running through your mind right now. Maybe things haven’t gone as planned. Maybe someone upset you. Maybe you’re just tired, overwhelmed, or not feeling like yourself.</p>
+          <p>Whatever it is, I want you to know that you don’t always have to pretend everything is okay.</p>
+          <p>You can talk to me. You can tell me what’s bothering you, even if you don’t know exactly how to explain it. I’ll listen.</p>
+          <p>And if you don’t feel like talking, that’s okay too. I can sit with you through the silence, send you something sweet, or try my very best to make you laugh with one of my ridiculous jokes. 😹</p>
+          <p>I might not always have the perfect words, and I can’t promise to fix every difficult thing that comes your way. But I can promise to care, to listen, and to try to understand.</p>
+          <p class="standalone">Please be gentle with yourself, My Michelle.</p>
+          <p class="standalone">You deserve kindness, especially from yourself.</p>
+          <p>Whatever today has looked like, I hope tomorrow gives you a reason to smile again.</p>
+          <p>And until then, remember that you have someone who genuinely wants to see you happy.</p>
+          <p class="closing"><strong>I love you, bby. ❤️</strong></p>
+          <button class="btn" type="button" data-back-env>Back to the Envelopes</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== LETTER 3: Open When You Need a Reminder ❤️ ========== -->
+    <section id="note3-screen" class="screen" aria-labelledby="note3-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-env>← Back to the envelopes</button></div>
+        <article class="sheet letter n4-letter n4-letter--wine">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <span class="n4-wax" aria-hidden="true">♥</span>
+          <p class="hand">Note 3 of 3</p>
+          <h2 id="note3-heading" tabindex="-1">Open When You Need a Reminder ❤️</h2>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <p class="salute">My Michelle,</p>
+          <p>There is something I really want you to remember.</p>
+          <p class="standalone">I truly love you.</p>
+          <p>Not just when we’re having beautiful days, when we’re laughing together, or when everything between us feels perfect.</p>
+          <p>I love you even through the moments when we’re still figuring each other out. Through the misunderstandings, the disagreements, the apologies, and the little efforts it takes to make things right again.</p>
+          <p>I know I don’t always get everything right. Sometimes I could communicate better, sometimes I could handle things differently, and sometimes I may not express everything I’m feeling as well as I should.</p>
+          <p>But please don’t confuse my imperfections with a lack of love.</p>
+          <p>I wouldn’t keep choosing to learn, to understand you better, to apologise when I’ve been wrong, to call you, to make you smile, and to find ways to remind you how special you are if you didn’t mean so much to me.</p>
+          <p>You’ve become someone I genuinely see in my future.</p>
+          <p>I don’t just want the beautiful moments with you. I want us to keep growing, to become better for each other, to achieve things together, and to create a story we can both look back on with full hearts.</p>
+          <p>I want you to feel loved, appreciated, respected and secure with me.</p>
+          <p>And although I may not always find the perfect words, one thing I hope you never have to question is this:</p>
+          <p class="standalone">My feelings for you are real.</p>
+          <p class="closing"><strong>I truly love you, My Michelle. And I’m grateful that it’s you. ❤️</strong></p>
+          <p class="sign">Always your boy.</p>
+          <button class="btn" type="button" data-back-env>Back to the Envelopes</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 9: DOOR 5, JUST FOUR OF OUR MANY MEMORIES (scrapbook) ========== -->
+    <section id="door5-screen" class="screen" aria-labelledby="door5-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back>← Back to the doors</button></div>
+
+        <article class="sheet letter">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+
+          <p class="hand rv" style="--i:0">Day 05</p>
+          <p class="date-label rv" style="--i:1">NOVEMBER 5, 2026</p>
+          <h2 id="door5-heading" class="rv" style="--i:2" tabindex="-1">Just Four of Our Many Memories ❤️</h2>
+          <p class="sub rv" style="--i:3">Four little moments from the many we’ve shared.</p>
+          <p class="rule rv" style="--i:4" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+          <p class="salute rv" style="--i:5">My Michelle,</p>
+          <p class="rv" style="--i:6">You know, we’ve shared so many moments together.</p>
+          <p class="rv" style="--i:7">Some were planned, some happened unexpectedly, some were full of laughter, and others were simply about enjoying each other’s company.</p>
+          <p class="rv" style="--i:8">And honestly, there are so many memories I could bring up that choosing just a few wasn’t easy.</p>
+          <p class="rv" style="--i:9">So today, I picked four photographs.</p>
+          <p class="rv" style="--i:10">Not because these are the only moments that matter, or because they are necessarily our greatest memories. They’re simply four moments I wanted to remind you of today.</p>
+          <p class="rv" style="--i:11">There are so many more stories, little adventures and beautiful moments that I could never fit into just four photographs.</p>
+          <p class="rv" style="--i:12">And the best part? We still have so much more to experience together.</p>
+          <p class="aside rv" style="--i:13">Come, let’s revisit these four little moments, Ma Chérie. ❤️</p>
+
+          <p class="rule m5-bridge" aria-hidden="true"><i></i><b>♡</b><i></i></p>
+
+          <!-- The four Polaroids, in order. Photos: assets/day5-memory-0N-....jpg -->
+          <div class="m5-cards" id="m5-cards">
+            <button class="m5-card m5-a1 reveal" type="button" data-mem="1" aria-label="Memory 01: The Day It All Started ❤️. Revisit this memory.">
+              <span class="photo-frame m5-photo">
+                <span class="photo-ph" aria-hidden="true"><b>♡</b><span>Our first date photo<br>goes here</span></span>
+                <img src="assets/day5-memory-01-first-date.jpg" alt="" loading="lazy" decoding="async">
+                <span class="adv-num">Memory 01</span>
+              </span>
+              <span class="m5-cap">Where our story began</span>
+              <span class="m5-go">Revisit this memory →</span>
+            </button>
+            <button class="m5-card m5-a2 reveal" type="button" data-mem="2" aria-label="Memory 02: That Little Place of Ours 😭❤️. Revisit this memory.">
+              <span class="photo-frame m5-photo">
+                <span class="photo-ph" aria-hidden="true"><b>♡</b><span>Our little place photo<br>goes here</span></span>
+                <img src="assets/day5-memory-02-our-little-place.jpg" alt="" loading="lazy" decoding="async">
+                <span class="adv-num">Memory 02</span>
+              </span>
+              <span class="m5-cap">A place full of our little secrets</span>
+              <span class="m5-go">Revisit this memory →</span>
+            </button>
+            <button class="m5-card m5-a3 reveal" type="button" data-mem="3" aria-label="Memory 03: Your First Visit to My Hostel 😂❤️. Revisit this memory.">
+              <span class="photo-frame m5-photo">
+                <span class="photo-ph" aria-hidden="true"><b>♡</b><span>Your first hostel visit photo<br>goes here</span></span>
+                <img src="assets/day5-memory-03-first-hostel-visit.jpg" alt="" loading="lazy" decoding="async">
+                <span class="adv-num">Memory 03</span>
+              </span>
+              <span class="m5-cap">The day you came to my side</span>
+              <span class="m5-go">Revisit this memory →</span>
+            </button>
+            <button class="m5-card m5-a4 reveal" type="button" data-mem="4" aria-label="Memory 04: The Surprise Shoe Date ❤️. Revisit this memory.">
+              <span class="photo-frame m5-photo">
+                <span class="photo-ph" aria-hidden="true"><b>♡</b><span>Our matching shoes photo<br>goes here</span></span>
+                <img src="assets/day5-memory-04-matching-shoes-day.jpg" alt="" loading="lazy" decoding="async">
+                <span class="adv-num">Memory 04</span>
+              </span>
+              <span class="m5-cap">A surprise I’ll always remember</span>
+              <span class="m5-go">Revisit this memory →</span>
+            </button>
+          </div>
+
+          <div class="m5-closing">
+            <p class="salute">My Michelle,</p>
+            <p>These are just four memories from the many we’ve shared.</p>
+            <p>If I had to include everything, I honestly don’t think this little album would have enough space. 😹</p>
+            <p>There are so many other moments I could talk about, so many little things that have happened between us, and so many memories that probably mean more to me than I sometimes manage to express.</p>
+            <p>I just wanted to bring back a few of them today, to remind you of some of the moments we’ve been lucky enough to share.</p>
+            <p>And you know what makes me even happier?</p>
+            <p class="standalone">We’re not done.</p>
+            <p>There are still so many places we haven’t visited, things we haven’t tried, adventures we haven’t experienced and ordinary days we haven’t spent together.</p>
+            <p>I want more random dates, more laughter, more pictures, more little surprises, more time with you and more stories that we’ll look back on someday.</p>
+            <p>I want us to keep creating memories, not just looking back at the ones we’ve already made.</p>
+            <p>So here’s to these four little reminders of our journey so far, and to all the beautiful moments still waiting for us.</p>
+            <p>I miss you, My Michelle, and I can’t wait to make more memories with you.</p>
+            <p class="sign">Always your boy. ❤️</p>
+            <p class="closing"><strong>So many more memories still to make. ❤️</strong></p>
+          </div>
+
+          <button class="btn alt" type="button" data-back>Back to the Doors</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== MEMORY 01: The Day It All Started ❤️ ========== -->
+    <section id="mem1-screen" class="screen" aria-labelledby="mem1-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-mem>← Back to our memories</button></div>
+        <article class="sheet letter m5-view m5-a1">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <p class="hand">Memory 01 of 04</p>
+          <h2 id="mem1-heading" tabindex="-1">The Day It All Started ❤️</h2>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <figure class="polaroid m5-big">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="photo-frame">
+              <div class="photo-ph" aria-hidden="true"><b>♡</b><span>Our first date photo<br>goes here</span></div>
+              <img src="assets/day5-memory-01-first-date.jpg" alt="Photo for The Day It All Started ❤️" loading="lazy" decoding="async">
+            </div>
+            <figcaption>Where our story began</figcaption>
+          </figure>
+          <p class="salute">My Michelle,</p>
+          <p>How could I leave this one out?</p>
+          <p class="aside">Our first date at Leonia Park, Namugongo. 😭❤️</p>
+          <p>I still remember that day so clearly. You arrived late, of course. 😹 But honestly, the moment I saw you, I wasn’t even thinking about the waiting anymore.</p>
+          <p>You looked so sexy and cute. Your skin looked so beautiful and smooth, and I remember noticing just how lovely you looked. I could barely get enough of those endless smiles of yours.</p>
+          <p>I remember how we spent that time together, how everything felt so new, and how much I enjoyed simply having you beside me.</p>
+          <p class="aside">And then there’s our first kiss. ❤️</p>
+          <p>I still remember every little detail. It wasn’t just another moment to me. It was one of those moments that quietly becomes part of your story forever.</p>
+          <p>And there’s something else I always remember about that day: the necklaces we exchanged.</p>
+          <p>I still have the one you gave me, Ma Chérie. And I hope you know that I don’t keep it just because it’s a necklace. It carries a little piece of that day with it. A reminder of you, of us, and of where everything started.</p>
+          <p>You know what’s funny? I found myself thinking about that day again and again in the days that followed. Replaying little moments in my head, remembering your smile, the way you looked, our conversations and that first kiss.</p>
+          <p>Even now, when I think about our beginning, I still get that same warm feeling.</p>
+          <p>If I could revisit that day, I honestly wouldn’t change much.</p>
+          <p>Maybe I’d just ask time to slow down a little longer.</p>
+          <p>Because that was the day I got to experience the beginning of something that means so much to me.</p>
+          <p class="standalone">I still have your necklace, and I still have that memory.</p>
+          <p class="standalone">And I’m grateful for both.</p>
+          <p class="m5-heart" aria-hidden="true">❤️</p>
+          <button class="btn" type="button" data-back-mem>Back to Our Memories</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== MEMORY 02: That Little Place of Ours 😭❤️ ========== -->
+    <section id="mem2-screen" class="screen" aria-labelledby="mem2-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-mem>← Back to our memories</button></div>
+        <article class="sheet letter m5-view m5-a2">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <p class="hand">Memory 02 of 04</p>
+          <h2 id="mem2-heading" tabindex="-1">That Little Place of Ours 😭❤️</h2>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <figure class="polaroid m5-big">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="photo-frame">
+              <div class="photo-ph" aria-hidden="true"><b>♡</b><span>Our little place photo<br>goes here</span></div>
+              <img src="assets/day5-memory-02-our-little-place.jpg" alt="Photo for That Little Place of Ours 😭❤️" loading="lazy" decoding="async">
+            </div>
+            <figcaption>A place full of our little secrets</figcaption>
+          </figure>
+          <p class="salute">My girl,</p>
+          <p class="aside">Now this one... 😭😂</p>
+          <p>If those walls could talk, I genuinely wonder what they would say about us.</p>
+          <p>That place holds so many memories. Back when I hadn’t joined campus yet, we had our own little routine there. It was one of those places where we could just be ourselves, spend time together and forget about everything else for a while.</p>
+          <p>We had so much fun there.</p>
+          <p>The laughter, the conversations, the little moments, the closeness... honestly, I miss those days.</p>
+          <p>And let’s not forget some of our first experiences together. Our first shower together, and that first intimate moment we shared. Those were personal moments that made that place even more meaningful to us.</p>
+          <p>I don’t think those walls have seen the last of our stories. 😂❤️</p>
+          <p>And bby, let’s talk about how I used to take over your lecture times!</p>
+          <p>Sometimes I would occupy so much of your time that I wonder whether your timetable even stood a chance against me. 😭</p>
+          <p>I really enjoyed having you around. I loved every opportunity to spend more time with you, even when it meant stretching our little moments together.</p>
+          <p>Looking back, I realise how much happiness those seemingly ordinary days gave me.</p>
+          <p>That place wasn’t just a room to me. It was somewhere we created memories, discovered new things about each other and enjoyed being together.</p>
+          <p>I wonder whether those walls miss us too.</p>
+          <p>Because I certainly miss those days.</p>
+          <p>And if we ever get the chance to revisit that place, I already know we’ll have plenty to remember.</p>
+          <p class="m5-heart" aria-hidden="true">❤️</p>
+          <button class="btn" type="button" data-back-mem>Back to Our Memories</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== MEMORY 03: Your First Visit to My Hostel 😂❤️ ========== -->
+    <section id="mem3-screen" class="screen" aria-labelledby="mem3-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-mem>← Back to our memories</button></div>
+        <article class="sheet letter m5-view m5-a3">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <p class="hand">Memory 03 of 04</p>
+          <h2 id="mem3-heading" tabindex="-1">Your First Visit to My Hostel 😂❤️</h2>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <figure class="polaroid m5-big">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="photo-frame">
+              <div class="photo-ph" aria-hidden="true"><b>♡</b><span>Your first hostel visit photo<br>goes here</span></div>
+              <img src="assets/day5-memory-03-first-hostel-visit.jpg" alt="Photo for Your First Visit to My Hostel 😂❤️" loading="lazy" decoding="async">
+            </div>
+            <figcaption>The day you came to my side</figcaption>
+          </figure>
+          <p class="salute">My Michelle,</p>
+          <p>This one makes me smile because of how the whole thing started. 😹</p>
+          <p class="aside">Your first visit to my hostel!</p>
+          <p>And somehow, you managed to get lost before even reaching me. 😂</p>
+          <p>I remember having to go and pick you up from outside. I don’t know what was going through your mind at that point, but I definitely wasn’t going to leave my girl wandering around looking for the place.</p>
+          <p>Eventually, we made it.</p>
+          <p>And honestly, we had such a good time together.</p>
+          <p>There isn’t some huge dramatic story behind this particular memory. I just remember being happy that you had come to see me and that I got to have you around in my little space.</p>
+          <p>But there’s one thing I cannot leave out.</p>
+          <p class="aside">The rice! 😭</p>
+          <p>I remember cooking rice for us, and let’s just say it wasn’t exactly my finest performance in the kitchen.</p>
+          <p>And somehow, I decided that you were responsible because you had distracted me. Hihi. 😂</p>
+          <p>As if you were supposed to stand there and supervise the entire cooking process!</p>
+          <p>Anyway, I still think you deserve some of the blame. 😹</p>
+          <p>But jokes aside, I loved having you visit me.</p>
+          <p>It was one of those simple moments that made me appreciate having someone I could share my space and my little everyday experiences with.</p>
+          <p>And next time I cook for you, I promise the rice will be better.</p>
+          <p class="closing"><strong>Hopefully. 😂❤️</strong></p>
+          <button class="btn" type="button" data-back-mem>Back to Our Memories</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== MEMORY 04: The Surprise Shoe Date ❤️ ========== -->
+    <section id="mem4-screen" class="screen" aria-labelledby="mem4-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-mem>← Back to our memories</button></div>
+        <article class="sheet letter m5-view m5-a4">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <p class="hand">Memory 04 of 04</p>
+          <h2 id="mem4-heading" tabindex="-1">The Surprise Shoe Date ❤️</h2>
+          <p class="rule" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <figure class="polaroid m5-big">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="photo-frame">
+              <div class="photo-ph" aria-hidden="true"><b>♡</b><span>Our matching shoes photo<br>goes here</span></div>
+              <img src="assets/day5-memory-04-matching-shoes-day.jpg" alt="Photo for The Surprise Shoe Date ❤️" loading="lazy" decoding="async">
+            </div>
+            <figcaption>A surprise I’ll always remember</figcaption>
+          </figure>
+          <p class="salute">My Ma Chérie,</p>
+          <p>Now this one is a little different.</p>
+          <p>The most recent time we met.</p>
+          <p>I still remember how you called me to your campus unexpectedly, just so we could go and buy ourselves matching shoes.</p>
+          <p>Honestly, that was such a sweet gesture.</p>
+          <p>I loved that you thought about something we could both have, something matching, something that would remind us of each other.</p>
+          <p>It made me feel appreciated, and I really loved that you wanted us to have that little thing together.</p>
+          <p>Although I must admit, I managed to piss you off that day. 😭😂</p>
+          <p>I won’t pretend I was completely innocent. But even with that little episode, the day still became one of my favourite recent memories.</p>
+          <p>And then we went to your home.</p>
+          <p>We spent two days together, and bby, I loved every second of it.</p>
+          <p>The way you cared for me, the way you made me feel comfortable, the little things you did, and even how you fed me. ❤️</p>
+          <p>I genuinely enjoyed being around you.</p>
+          <p>Sometimes it’s not even about where we go or what we do. It’s about the feeling of being with someone who makes you feel wanted and cared for.</p>
+          <p>Those two days reminded me how much I enjoy having you around.</p>
+          <p>I loved the time we spent together, the attention, the affection and all those little moments that probably seemed ordinary while they were happening.</p>
+          <p>And now that I’m thinking about them again, I miss you.</p>
+          <p>I miss being around you, enjoying your company and having those moments where nothing else really matters.</p>
+          <p>Thank you for that day, for the matching shoes, and especially for the two days we got to spend together.</p>
+          <p>I hope we create many more memories like that.</p>
+          <p class="closing"><strong>I love you, My Michelle. ❤️</strong></p>
+          <button class="btn" type="button" data-back-mem>Back to Our Memories</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SCREEN 10: DOOR 6, FIVE LITTLE GIFTS FOR YOU (gift boxes) ========== -->
+    <section id="door6-screen" class="screen" aria-labelledby="door6-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back>← Back to the doors</button></div>
+
+        <article class="sheet letter">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+
+          <p class="hand rv" style="--i:0">Day 06</p>
+          <p class="date-label rv" style="--i:1">NOVEMBER 6, 2026</p>
+          <h2 id="door6-heading" class="rv" style="--i:2" tabindex="-1">Five Little Gifts for You 🎁</h2>
+          <p class="sub rv" style="--i:3">Five little things I’d love to give you, Ma Chérie.</p>
+          <p class="rule rv" style="--i:4" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+
+          <p class="salute rv" style="--i:5">My Michelle,</p>
+          <p class="rv" style="--i:6">If I could, I’d probably find a way to wrap up all the beautiful things I wish for you and place them right in front of you.</p>
+          <p class="rv" style="--i:7">But since I can’t exactly fit everything into gift boxes, I decided to do something a little different.</p>
+          <p class="rv" style="--i:8">Today, I have five little gifts for you.</p>
+          <p class="rv" style="--i:9">Some are things I wish I could give you more often, some are experiences I want us to share, and others are little reminders of how much you mean to me.</p>
+          <p class="rv" style="--i:10">They’re not the kind of gifts you can put on a shelf, but I hope they’re the kind you’ll carry in your heart.</p>
+          <p class="aside rv" style="--i:11">So, Ma Chérie, shall we unwrap them? ❤️</p>
+
+          <!-- Transition into the gifts -->
+          <p class="rule g6-bridge" aria-hidden="true"><i></i><b>♡</b><i></i></p>
+          <p class="hand g6-lead">Five little gifts are waiting for you...</p>
+          <p class="g6-progress" id="g6-progress" role="status" aria-live="polite">0 of 5 gifts unwrapped</p>
+
+          <div class="g6-gifts" id="g6-gifts">
+            <button class="g6-gift g6-g1" type="button" data-gift="1" aria-label="Gift 01: A little more of us. Tap to unwrap.">
+              <span class="g6-badge" aria-hidden="true">UNWRAPPED ❤️</span>
+              <span class="g6-art" aria-hidden="true"><span class="g6-box"></span><span class="g6-pop">♡</span><span class="g6-lid"><i class="g6-lp"></i><i class="g6-rp"></i><b></b></span></span>
+              <span class="g6-num">Gift 01</span>
+              <span class="g6-label">A little more of us</span>
+            </button>
+            <button class="g6-gift g6-g2" type="button" data-gift="2" aria-label="Gift 02: Something to make you smile. Tap to unwrap.">
+              <span class="g6-badge" aria-hidden="true">UNWRAPPED ❤️</span>
+              <span class="g6-art" aria-hidden="true"><span class="g6-box"></span><span class="g6-pop">♡</span><span class="g6-lid"><i class="g6-lp"></i><i class="g6-rp"></i><b></b></span></span>
+              <span class="g6-num">Gift 02</span>
+              <span class="g6-label">Something to make you smile</span>
+            </button>
+            <button class="g6-gift g6-g3" type="button" data-gift="3" aria-label="Gift 03: Our little adventures. Tap to unwrap.">
+              <span class="g6-badge" aria-hidden="true">UNWRAPPED ❤️</span>
+              <span class="g6-art" aria-hidden="true"><span class="g6-box"></span><span class="g6-pop">♡</span><span class="g6-lid"><i class="g6-lp"></i><i class="g6-rp"></i><b></b></span></span>
+              <span class="g6-num">Gift 03</span>
+              <span class="g6-label">Our little adventures</span>
+            </button>
+            <button class="g6-gift g6-g4" type="button" data-gift="4" aria-label="Gift 04: Something that gets better. Tap to unwrap.">
+              <span class="g6-badge" aria-hidden="true">UNWRAPPED ❤️</span>
+              <span class="g6-art" aria-hidden="true"><span class="g6-box"></span><span class="g6-pop">♡</span><span class="g6-lid"><i class="g6-lp"></i><i class="g6-rp"></i><b></b></span></span>
+              <span class="g6-num">Gift 04</span>
+              <span class="g6-label">Something that gets better</span>
+            </button>
+            <button class="g6-gift g6-g5" type="button" data-gift="5" aria-label="Gift 05: Come here, my girl. Tap to unwrap.">
+              <span class="g6-badge" aria-hidden="true">UNWRAPPED ❤️</span>
+              <span class="g6-art" aria-hidden="true"><span class="g6-box"></span><span class="g6-pop">♡</span><span class="g6-lid"><i class="g6-lp"></i><i class="g6-rp"></i><b></b></span><span class="g6-seal">♥</span></span>
+              <span class="g6-num">Gift 05</span>
+              <span class="g6-label">Come here, my girl</span>
+            </button>
+          </div>
+
+          <!-- Revealed once all five gifts have been unwrapped -->
+          <div class="g6-final" id="g6-final" hidden>
+            <p class="salute">My Michelle,</p>
+            <p>I wish I could wrap up every beautiful thing I want for you and place it right in front of you.</p>
+            <p>But these five little gifts are just my way of telling you what I hope we get to experience together.</p>
+            <p>More time, more smiles, more adventures, more understanding and more love.</p>
+            <p>And if there’s one gift I hope I can keep giving you, it’s the feeling of being genuinely loved.</p>
+            <p>I hope we keep making each other happy, learning from each other and finding new reasons to smile together.</p>
+            <p>Happy unwrapping, Ma Chérie. ❤️</p>
+            <p class="sign">Always your boy.</p>
+            <p class="closing"><strong>Five little gifts. So much love. ❤️</strong></p>
+          </div>
+
+          <button class="btn alt" type="button" data-back>Back to the Doors</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== GIFT 01: The Gift of More Time Together ========== -->
+    <section id="gift1-screen" class="screen" aria-labelledby="gift1-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-gift>← Back to my gifts</button></div>
+        <article class="sheet letter g6-letter g6-l-g1">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <p class="hand rv" style="--i:0">Gift 01 of 05</p>
+          <h2 id="gift1-heading" class="rv" style="--i:1" tabindex="-1">The Gift of More Time Together</h2>
+          <p class="rule rv" style="--i:2" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <p class="salute rv" style="--i:3">My Michelle,</p>
+          <p class="rv" style="--i:5">If there is one thing I wish I could give you more of, it’s time.</p>
+          <p class="rv" style="--i:6">More afternoons together. More random visits. More dates that we don’t have to rush. More long conversations where we lose track of time. More moments when we can simply sit beside each other and enjoy being together.</p>
+          <p class="rv" style="--i:7">I know we don’t always get to spend as much time together as we’d like. There are circumstances, responsibilities and things we both have to work around.</p>
+          <p class="rv" style="--i:8">But if I could give you anything, I’d give us more opportunities to be together without always worrying about when the moment will end.</p>
+          <p class="rv" style="--i:9">I’d love more spontaneous days with you, more little adventures and even those ordinary days when we do absolutely nothing special.</p>
+          <p class="rv" style="--i:10">Because honestly, having you around is already something special to me.</p>
+          <p class="rv" style="--i:11">I miss you, bby.</p>
+          <p class="rv" style="--i:12">And I look forward to the days when we’ll have even more time to enjoy each other’s company.</p>
+          <p class="closing rv" style="--i:13"><strong>Here’s to more of us. ❤️</strong></p>
+          <button class="btn" type="button" data-back-gift>Back to My Gifts</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== GIFT 02: The Gift of a Million More Smiles ========== -->
+    <section id="gift2-screen" class="screen" aria-labelledby="gift2-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-gift>← Back to my gifts</button></div>
+        <article class="sheet letter g6-letter g6-l-g2">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <p class="hand rv" style="--i:0">Gift 02 of 05</p>
+          <h2 id="gift2-heading" class="rv" style="--i:1" tabindex="-1">The Gift of a Million More Smiles</h2>
+          <p class="rule rv" style="--i:2" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <p class="salute rv" style="--i:3">My beautiful girl,</p>
+          <p class="rv" style="--i:5">If I could give you one thing every single day, I’d give you a reason to smile.</p>
+          <p class="rv" style="--i:6">You probably don’t realise how much I enjoy seeing you smile, especially when I say something sweet and you start blushing. 😹❤️</p>
+          <p class="rv" style="--i:7">Sometimes I deliberately keep saying those things just to see that reaction.</p>
+          <p class="rv" style="--i:8">And the funny part is that I end up smiling too.</p>
+          <p class="rv" style="--i:9">I love your laughter, your little shy moments, your funny expressions and even those times when you’re trying so hard not to smile but I can tell you’re about to.</p>
+          <p class="rv" style="--i:10">I know life won’t always give you easy days. There will be moments when you’re tired, stressed or simply not in the mood for anything.</p>
+          <p class="rv" style="--i:11">But I hope I can keep being someone who brings a little happiness into your day.</p>
+          <p class="rv" style="--i:12">Whether it’s through a sweet message, a silly joke, a random call or just reminding you how beautiful you are.</p>
+          <p class="rv" style="--i:13">I want to keep seeing that smile, Ma Chérie.</p>
+          <p class="rv" style="--i:14">And if I have to embarrass myself with terrible jokes to earn it, then I guess that’s part of my job. 😭😂</p>
+          <p class="rv" style="--i:15">Here’s to a million more smiles from you.</p>
+          <p class="closing rv" style="--i:16"><strong>I love you, bby. ❤️</strong></p>
+          <button class="btn" type="button" data-back-gift>Back to My Gifts</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== GIFT 03: The Gift of Beautiful Experiences ========== -->
+    <section id="gift3-screen" class="screen" aria-labelledby="gift3-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-gift>← Back to my gifts</button></div>
+        <article class="sheet letter g6-letter g6-l-g3">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <p class="hand rv" style="--i:0">Gift 03 of 05</p>
+          <h2 id="gift3-heading" class="rv" style="--i:1" tabindex="-1">The Gift of Beautiful Experiences</h2>
+          <p class="rule rv" style="--i:2" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <p class="salute rv" style="--i:3">My Michelle,</p>
+          <p class="rv" style="--i:5">I feel like we’ve only scratched the surface of all the things we could experience together.</p>
+          <p class="rv" style="--i:6">There are still so many places I want us to visit, so many dates I want to take you on, and so many things I want us to try.</p>
+          <p class="rv" style="--i:7">I want the fancy dinner dates, the spontaneous outings, the little getaways, the picnics, the matching things and even those random adventures we might decide to have without much planning.</p>
+          <p class="rv" style="--i:8">I want us to discover new places, take plenty of pictures, laugh at silly things and come home with stories we’ll keep talking about.</p>
+          <p class="rv" style="--i:9">And it doesn’t always have to be something expensive or extraordinary.</p>
+          <p class="rv" style="--i:10">Sometimes a simple day with you is enough to make me happy.</p>
+          <p class="rv" style="--i:11">I want us to keep exploring life together, trying new things and creating memories that belong to the two of us.</p>
+          <p class="rv" style="--i:12">We’ve already got some beautiful moments behind us, but there’s still so much ahead.</p>
+          <p class="rv" style="--i:13">And I can’t wait to experience more of it with you.</p>
+          <p class="rv" style="--i:14">So, Ma Chérie, keep some space in your calendar for me. 😹❤️</p>
+          <p class="closing rv" style="--i:15"><strong>We’ve got places to go and memories to make.</strong></p>
+          <button class="btn" type="button" data-back-gift>Back to My Gifts</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== GIFT 04: The Gift of a Love That Keeps Growing ========== -->
+    <section id="gift4-screen" class="screen" aria-labelledby="gift4-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-gift>← Back to my gifts</button></div>
+        <article class="sheet letter g6-letter g6-l-g4">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <p class="hand rv" style="--i:0">Gift 04 of 05</p>
+          <h2 id="gift4-heading" class="rv" style="--i:1" tabindex="-1">The Gift of a Love That Keeps Growing</h2>
+          <p class="rule rv" style="--i:2" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <p class="salute rv" style="--i:3">My Michelle,</p>
+          <p class="rv" style="--i:5">This is one gift I really hope we can keep giving each other.</p>
+          <p class="standalone rv" style="--i:6">A love that continues to grow.</p>
+          <p class="rv" style="--i:7">Not a love that expects us to be perfect, because neither of us is.</p>
+          <p class="rv" style="--i:8">We’ve had beautiful moments, but we’ve also had disagreements, misunderstandings and times when we haven’t handled things the best way.</p>
+          <p class="rv" style="--i:9">I don’t want us to pretend those moments don’t exist.</p>
+          <p class="rv" style="--i:10">I want us to keep learning from them.</p>
+          <p class="rv" style="--i:11">I want us to become better at listening to each other, communicating, understanding one another and recognising when we’ve made mistakes.</p>
+          <p class="rv" style="--i:12">I want us to be able to apologise without pride getting in the way, to talk things through instead of letting little things become bigger than they should be, and to keep making room for each other’s feelings.</p>
+          <p class="rv" style="--i:13">I want you to feel appreciated, respected, heard and loved.</p>
+          <p class="rv" style="--i:14">And I want to offer you the same.</p>
+          <p class="rv" style="--i:15">I can’t promise that we’ll never have difficult days, but I genuinely hope we keep finding better ways to face them together.</p>
+          <p class="rv" style="--i:16">I don’t just want us to stay together.</p>
+          <p class="standalone rv" style="--i:17">I want us to keep growing together.</p>
+          <p class="rv" style="--i:18">And I hope that with every passing month, we become even better at loving each other.</p>
+          <p class="closing rv" style="--i:19"><strong>Here’s to us, My Michelle. ❤️</strong></p>
+          <button class="btn" type="button" data-back-gift>Back to My Gifts</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== GIFT 05: The Gift of a Hug Whenever You Need One ========== -->
+    <section id="gift5-screen" class="screen" aria-labelledby="gift5-heading" aria-hidden="true" inert>
+      <div class="page">
+        <div class="page-nav"><button class="back-btn" type="button" data-back-gift>← Back to my gifts</button></div>
+        <article class="sheet letter g6-letter g6-l-g5">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <p class="g6-beat" aria-hidden="true">❤️</p>
+          <p class="hand g6-slow" style="--i:0">Gift 05 of 05</p>
+          <h2 id="gift5-heading" class="g6-slow" style="--i:1" tabindex="-1">The Gift of a Hug Whenever You Need One</h2>
+          <p class="rule g6-slow" style="--i:2" aria-hidden="true"><i></i><b>✦</b><i></i></p>
+          <p class="salute g6-slow" style="--i:3">My Michelle,</p>
+          <p class="g6-slow" style="--i:5">If I could give you this gift in person, I wouldn’t even need to wrap it.</p>
+          <p class="g6-slow" style="--i:6">I’d just pull you close and give you the biggest hug.</p>
+          <p class="g6-slow" style="--i:7">The kind where you don’t have to say anything. You can just relax, feel loved and enjoy being held for a little while.</p>
+          <p class="g6-slow" style="--i:8">I wish I could do that whenever you miss me.</p>
+          <p class="g6-slow" style="--i:9">Whenever you’ve had a difficult day. Whenever you’re tired, overwhelmed, or simply wish I were around.</p>
+          <p class="g6-slow" style="--i:10">Sometimes I wish I could just appear beside you, hold your hand, pull you close and remind you that everything doesn’t have to be figured out at once.</p>
+          <p class="g6-slow" style="--i:11">I know a message or a phone call isn’t quite the same as having someone physically beside you.</p>
+          <p class="g6-slow" style="--i:12">But until I can give you that hug in person, I hope these words can remind you how much I wish I could.</p>
+          <p class="g6-slow" style="--i:13">And when I finally get to see you again, please don’t expect a small hug. 😭❤️</p>
+          <p class="g6-slow" style="--i:14">I’m probably going to hold you for longer than necessary.</p>
+          <p class="g6-slow" style="--i:15">I miss you, Ma Chérie.</p>
+          <p class="g6-slow" style="--i:16">Sending you the biggest hug from your boy.</p>
+          <p class="closing g6-slow" style="--i:17"><strong>Mwah. ❤️</strong></p>
+          <button class="btn" type="button" data-back-gift>Back to My Gifts</button>
+        </article>
+      </div>
+    </section>
+
+  <!-- Save confirmation (Door 3) -->
+  <div class="saved-pop" id="d3-pop" aria-live="polite"><div><b>❤</b><p class="hand" id="d3-pop-text">Saved, My Michelle</p></div></div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
